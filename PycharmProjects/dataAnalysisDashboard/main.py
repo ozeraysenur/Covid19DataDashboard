@@ -84,8 +84,8 @@ with tab2:
 with tab3:
     st.header("Interactive Global Maps")
 
-    countries = data["Country"].unique().tolist()  # Tüm ülke isimlerini al
-    countries.insert(0, "All Countries")  # "All Countries" seçeneğini ekle
+    countries = data["Country"].unique().tolist()
+    countries.insert(0, "All Countries")
 
     selected_countries = st.multiselect(
         "Select Countries to Display",
@@ -108,27 +108,27 @@ with tab3:
         hover_name="Country",
         hover_data={"Confirmed": True},
         title="Global Confirmed Cases",
-        color_continuous_scale="Viridis",  # Daha yumuşak bir renk skalası
+        color_continuous_scale="Viridis",
     )
 
     # Map updates
     fig.update_layout(
-        title_font=dict(size=24, family='Arial', color='darkgreen'),  # Başlık için stil
+        title_font=dict(size=24, family='Arial', color='darkgreen'),
         geo=dict(
             showframe=False,
             showcoastlines=True,
             coastlinecolor="gray",
-            projection_type="equirectangular",  # Daha geniş görünüm
+            projection_type="equirectangular",
         ),
-        plot_bgcolor="rgba(0,0,0,0)",  # Haritanın arka planı için açık gri
-        paper_bgcolor="rgba(0,0,0,0)",  # Harita dışındaki genel arka plan (yumuşak mavi)
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
     )
 
 
     fig.update_geos(
-        showcountries=True,  # Ülke sınırlarını göster
-        countrycolor="black",  # Sınır rengi
-        fitbounds="locations"  # Otomatik zoom
+        showcountries=True,
+        countrycolor="black",
+        fitbounds="locations"
     )
 
     # optimize the zoom of the map and show
