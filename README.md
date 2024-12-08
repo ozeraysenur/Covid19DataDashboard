@@ -28,7 +28,12 @@ Welcome to the **COVID-19 Global Data Dashboard**, a Streamlit-based web applica
 ### 🔄 **Real-Time Updates**
 - Fetch the **latest COVID-19 data** from an API to keep your analysis up-to-date.
 
----
+## 📦 Install Dependencies
+Ensure Python is installed, then run:
+```bash
+pip install -r requirements.txt
+```
+
 ## 🚀 Run the Dashboard
 
 To launch the dashboard, run the following command:
@@ -48,9 +53,8 @@ streamlit run main.py
 ---
 
 ## 🎥 Demo
-
-Watch the app in action:  
-📽️ **Demo Video**: *(Attach link here)*
+Watch the app in action:
+[Demo Video](covidDataDashboardDemo.mp4)
 
 ---
 
